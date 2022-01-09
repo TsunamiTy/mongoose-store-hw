@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>See Product Details</title>
+</head>
+<body>
+    <h1>See Product Details</h1>
+    <a href="/products/<%= product._id %>/edit">Edit</a>
+    <h2><%= product.name %></h2>
+    <img src= '<%=product.img%>.jpg'/>
+    <p>Description: <%= product.description %></p>
+    <h3>Price: $<%= product.price %></h3>
+    <h4>Quantity: <%= product.qty %></h4>
+    <form action='/products/?_method=POST' method='POST' style='display:inline; margin-left:16px;'>
+        <input type='submit' value='BUY' />
+    </form>
+    <br>
+    <br>
+    <form action='/products/<%= product.id %>?_method=DELETE' method='POST'
+        style='display:inline; margin-left:16px;'>
+        <input type='submit' value='DELETE' />
+    </form>
+    <br>
+    <br>
+    <a href="/products">Back to Product list</a>
+
+    <style type='text/css'>
+        body {
+            color: crimson;
+            background-color: grey;
+            text-align: center;
+            font-family: monospace;
+        }
+    </style>
+
+</body>
+</html>
