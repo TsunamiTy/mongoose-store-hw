@@ -10,10 +10,10 @@ require('dotenv').config();
 
 app.set('view engine', 'ejs');
 
-const { PORT, DATABASE_URL } = process.env;
+const { PORT, DATABASE_URI } = process.env;
 
 // ====database connection====
-mongoose.connect(DATABASE_URL);
+mongoose.connect(DATABASE_URI);
 
 const db = mongoose.connection;
 
@@ -37,7 +37,3 @@ app.use('/products', productController);
 app.get('/', (req, res) => {
     res.redirect('/products')
 });
-
-// app.get('/*', (req, res) => {
-//     res.render('404.ejs');
-// });
