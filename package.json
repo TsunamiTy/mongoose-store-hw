@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-store-hw",
+  "name": "mongoose-store",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,19 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TsunamiTy/mongoose-store-hw.git"
-  },
-  "author": "Tyler Hankerson",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TsunamiTy/mongoose-store-hw/issues"
-  },
-  "homepage": "https://github.com/TsunamiTy/mongoose-store-hw#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "heroku": "^7.59.2",
     "method-override": "^3.0.0",

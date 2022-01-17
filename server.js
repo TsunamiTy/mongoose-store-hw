@@ -10,14 +10,15 @@ require('dotenv').config();
 
 app.set('view engine', 'ejs');
 
-const { PORT, DATABASE_URI } = process.env;
+const { PORT = 3000, DATABASE_URL } = process.env;
 
 // ====database connection====
-mongoose.connect(DATABASE_URI);
+mongoose.connect(DATABASE_URL);
 
 const db = mongoose.connection;
 
 // ====listener====
+
 app.listen(PORT, () => console.log(`server is listening on port: ${PORT}`));
 
 // ====database connection error/success====
@@ -37,3 +38,7 @@ app.use('/products', productController);
 app.get('/', (req, res) => {
     res.redirect('/products')
 });
+
+// app.get('/*', (req, res) => {
+//     res.render('404.ejs');
+// });

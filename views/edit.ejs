@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-    <title>Book List</title>
+    <title>Edit Products</title>
   </head>
 
   <body>
@@ -13,9 +13,9 @@
     <form action ='/products/<%=product._id%>?_method=PUT' method='POST'>
       <!--  NOTE: the form is pre-populated with values for the server-->
       Name: <input type="text" name="name" value="<%=product.name%>" /><br />
-      Description: <input type="text" name="author" value="<%=product.description%>" /><br />
+      Description: <input type="text" name="description" value="<%=product.description%>" /><br />
       Price: <input type="number" name="price" value='<%=product.price%>' /><br />
-      Quantity: <input type="number" name="quantity" value="<%= product.qty %>" /><br />
+      Quantity: <input type="number" name="quantity" value="<%=product.qty%>" /><br />
 
       <br />
       <input type="submit" value="Submit Changes" />
